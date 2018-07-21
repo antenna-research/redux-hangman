@@ -15,8 +15,6 @@ class GamePageContainer extends React.PureComponent {
     this.props.newGame( randomWord() )
   }
 
-
-
   render() {
     if (!this.props.word) return 'Loading...'
     if (!gameFinished(this.props.word, this.props.letters)) {
@@ -30,7 +28,6 @@ class GamePageContainer extends React.PureComponent {
       </div>)
     }
   }
-
 }
 
 const mapStateToProps = (state) => {
@@ -40,5 +37,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-// export default 
 export default connect(mapStateToProps, { newGame, resetGuesses, makeGuess })(GamePageContainer)

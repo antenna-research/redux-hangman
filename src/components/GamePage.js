@@ -1,9 +1,6 @@
 import * as React from 'react'
 import { showGuess, wrongGuessCount } from '../lib/game'
 
-// string  showGuess(word, guesses)
-// int     wrongGuessCount(word, guesses)
-
 export default function GamePage(props) {
 
   const handleChange = (event) => {
@@ -28,8 +25,5 @@ export default function GamePage(props) {
       <h4> Wrong guesses so far: { wrongGuessCount( props.word, props.letters ) } </h4>
       <button onClick={props.restart} >Play Again!</button>
   </div>)
-/*
-There should be a button to create a new game. When you click it, an action of type `NEW_GAME` should be dispatched.
-The result should be that a new random word is selected and the guesses are reset/emptied.
-*/
+
 }
